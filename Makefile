@@ -6,6 +6,8 @@
 ##
 
 SRC_SHORT		=	unistd.c \
+					\
+					sys/socket.c \
 
 ## Project sources
 SRC_DIR 		= 	src/
