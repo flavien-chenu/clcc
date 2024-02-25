@@ -2,7 +2,7 @@
 ** EPITECH PROJECT, 2024
 ** libc-calls-tester
 ** File description:
-** unistd
+** stdlib
 */
 
 #include "internal.h"

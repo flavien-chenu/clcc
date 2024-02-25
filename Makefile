@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-SRC_SHORT		=	unistd.c \
+SRC_SHORT		=	stdlib.c \
 					\
 					sys/socket.c \
 
