@@ -7,7 +7,7 @@ Lib CLCC allows you to control LibC calls like `malloc`, `socket`, `write`, etc.
 ```bash
 mkdir libs
 cd libs
-git clone <URI-REPO>
+git clone https://github.com/flavien-chenu/clcc.git
 ```
 
 ## Compilation
