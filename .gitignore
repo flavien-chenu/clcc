@@ -4,3 +4,4 @@ tmp
 *.so
 *.a
 *.out
+.vscode
