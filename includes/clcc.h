@@ -31,6 +31,15 @@
     clcc_##func_name##_control_after(0) \
 
 /**
+ * @brief Enable immediate control of function and set return value
+ * @param func_name Function name to control
+ * @param value Return value that function will return
+ */
+#define clcc_return_now(func_name, value) \
+    clcc_##func_name##_set_return_value(value); \
+    clcc_control_now(func_name)
+
+/**
  * @brief Enable or disable control of function
  * @param func_name Function name to control
  * @param enabled Enable or disable control of function
