@@ -12,3 +12,4 @@
 PUBLIC_PROTO_CLCC(int, socket);
 PUBLIC_PROTO_CLCC(int, setsockopt);
 PUBLIC_PROTO_CLCC(int, bind);
+PUBLIC_PROTO_CLCC(int, listen);
