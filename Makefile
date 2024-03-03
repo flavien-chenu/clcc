@@ -75,9 +75,6 @@ $(TESTS_NAME):	$(TESTS_OBJ) $(SRC_GCNO)
 
 all: 			$(NAME)
 
-exec:			$(NAME)
-				@./$(NAME)
-
 clean:			clean_src
 				@rm -f $(TESTS_OBJ)
 
@@ -109,15 +106,10 @@ coverage:
 coverage_branch:
 				@gcovr --branch
 
-run:
-	@rm -f libclcc.so
-	@rm -f a.out
-	@gcc -c symbols/dynamic/unistd.c -o symbols/dynamic/unistd.o -fPIC
-	@gcc --shared -o libclcc.so symbols/dynamic/unistd.o
-	@gcc -c main.c
-	@gcc main.o -L. -lclcc
+update:
+				@./pull.sh .
 
-.PHONY: all clean clean_src fclean re exec \
+.PHONY: all clean clean_src fclean re \
 		tests_criterion tests_run \
-		coverage coverage_branch run
+		coverage coverage_branch update
 DEFAULT_GOAL := all
