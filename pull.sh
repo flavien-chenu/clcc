@@ -1,6 +1,6 @@
 #! /bin/bash
 
-gitfiles=(.git .gitmodules .gitattributes)
+gitfiles=(.git .gitmodules .gitattributes .gitignore)
 tmp_dir="/tmp/$(uuidgen)"
 repo_url=git@github.com:flavien-chenu/clcc.git
 
