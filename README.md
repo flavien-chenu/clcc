@@ -43,8 +43,8 @@ int main() {
 
 ## Documentation
 
-<details>
-  <summary><code>clcc_set_return_value</code></summary>
+
+### `clcc_set_return_value`
 This function allows you to specify the return value of a function.
 
 > ⚠️ Simply call this function does not enable the control of the function. You need to call `clcc_enable_control` to start to mock the return values.
@@ -65,10 +65,8 @@ int main(void) {
     clcc_disable_control(atoi);
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_set_control</code></summary>
+### `clcc_set_control`
 This function allows you to specify enable or disable the control of a function.
 
 **Parameters**
@@ -88,10 +86,8 @@ int main(void) {
     clcc_set_control(atoi, false); // Disable function control
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_control_after</code></summary>
+### `clcc_control_after`
 This function allows you to enable the control of a function after a certain number of calls.
 
 **Parameters**
@@ -115,10 +111,8 @@ int main(void) {
     clcc_disable_control(atoi);
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_disable_control</code></summary>
+### `clcc_disable_control`
 This function allows you to disable the control of a function and to stop to mock its return values.
 
 **Parameters**
@@ -137,10 +131,8 @@ int main(void) {
     i = atoi("42"); // Will return 42
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_enable_control</code></summary>
+### `clcc_enable_control`
 This function allows you to enable the control of a function and to start to mock its return values.
 
 **Parameters**
@@ -158,10 +150,8 @@ int main(void) {
     clcc_disable_control(atoi);
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_set_return_value_after</code></summary>
+### `clcc_set_return_value_after`
 This function allows you to specify the return value of a function after a certain number of calls.
 
 **Parameters**
@@ -186,11 +176,16 @@ int main(void) {
     clcc_disable_control(atoi);
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_return_now</code></summary>
-This function allows you to return the specified value immediately. Is equivalent to <code>clcc_set_return_value_after</code> and <code>clcc_enable_control</code> with a number of calls equal to 0.
+### `clcc_return_now`
+This function allows you to return the specified value immediately. Is equivalent to `clcc_set_return_value_after` and `clcc_enable_control` with a number of calls equal to 0.
+
+**Parameters**
+| Name | Description |
+| --- | --- |
+| `function` | Function name to control (not a string) |
+| `value` | Return value of the function |
+
 
 ```c
 int main(void) {
@@ -203,10 +198,25 @@ int main(void) {
     clcc_disable_control(atoi);
 }
 ```
-</details>
 
-<details>
-    <summary><code>clcc_control_now</code></summary>
-This function allows you to enable the control of a function immediately. Is equivalent to <code>clcc_set_return_value_after</code> and <code>clcc_enable_control</code> with a number of calls equal to 0.
-#
+### `clcc_control_now`
+This function allows you to enable the control of a function immediately. Is equivalent to `clcc_set_return_value_after` and `clcc_enable_control` with a number of calls equal to 0.
+
+**Parameters**
+| Name | Description |
+| --- | --- |
+| `function` | Function name to control (not a string) |
+
+```c
+int main(void) {
+    int i = atoi("42"); // Will return 42
+
+    clcc_set_return_value(atoi, 0);
+    i = atoi("42"); // Will return 42
+    clcc_control_now(atoi);
+    i = atoi("421"); // Will return 0
+    clcc_disable_control(atoi);
+}
+```
+
 Made by [Flavien Chenu](https://github.com/flavien-chenu)
