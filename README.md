@@ -45,6 +45,7 @@ int main() {
 
 
 ### `clcc_set_return_value`
+---
 This function allows you to specify the return value of a function.
 
 > ⚠️ Simply call this function does not enable the control of the function. You need to call `clcc_enable_control` to start to mock the return values.
@@ -67,6 +68,7 @@ int main(void) {
 ```
 
 ### `clcc_set_control`
+---
 This function allows you to specify enable or disable the control of a function.
 
 **Parameters**
@@ -88,6 +90,7 @@ int main(void) {
 ```
 
 ### `clcc_control_after`
+---
 This function allows you to enable the control of a function after a certain number of calls.
 
 **Parameters**
@@ -113,6 +116,7 @@ int main(void) {
 ```
 
 ### `clcc_disable_control`
+---
 This function allows you to disable the control of a function and to stop to mock its return values.
 
 **Parameters**
@@ -133,6 +137,7 @@ int main(void) {
 ```
 
 ### `clcc_enable_control`
+---
 This function allows you to enable the control of a function and to start to mock its return values.
 
 **Parameters**
@@ -152,6 +157,7 @@ int main(void) {
 ```
 
 ### `clcc_set_return_value_after`
+---
 This function allows you to specify the return value of a function after a certain number of calls.
 
 **Parameters**
@@ -178,6 +184,7 @@ int main(void) {
 ```
 
 ### `clcc_return_now`
+---
 This function allows you to return the specified value immediately. Is equivalent to `clcc_set_return_value_after` and `clcc_enable_control` with a number of calls equal to 0.
 
 **Parameters**
@@ -200,6 +207,7 @@ int main(void) {
 ```
 
 ### `clcc_control_now`
+---
 This function allows you to enable the control of a function immediately. Is equivalent to `clcc_set_return_value_after` and `clcc_enable_control` with a number of calls equal to 0.
 
 **Parameters**
