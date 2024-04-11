@@ -9,6 +9,7 @@ SRC_SHORT		=	stdlib.c \
 					signal.c \
 					\
 					sys/socket.c \
+					sys/select.c \
 
 ## Project sources
 SRC_DIR 		= 	src/
