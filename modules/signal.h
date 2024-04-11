@@ -9,4 +9,6 @@
 
 #include "../includes/clcc.h"
 
-PUBLIC_PROTO_CLCC(void (*)(int), signal)
+typedef void (*sighandler_t)(int);
+
+PUBLIC_PROTO_CLCC(sighandler_t, signal);

@@ -7,4 +7,6 @@
 
 #include "internal.h"
 
-DECL_CLCC_ARGS_2(void (*)(int), signal, int, void (*)(int))
+typedef void (*sighandler_t)(int);
+
+DECL_CLCC_ARGS_2(sighandler_t, signal, int, sighandler_t);
