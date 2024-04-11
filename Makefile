@@ -50,7 +50,7 @@ BIN_BUILD_LOG	= "$(S_RED)📦 Building library $(S_BOLD)%s$(S_END)\n"
 BIN_SUCCESS_LOG = "$(S_GREEN)✅ $(S_BOLD)%s$(S_END)\
 $(S_GREEN)successfully built $(S_END)\n"
 RUNNING_TESTS_LOG = "$(S_BLUE)🧪 Running tests from $(S_BOLD)%s$(S_END)\n"
-CLEAN_PROJECT_LOG = "🧽 Project has been cleaned\n"
+CLEAN_PROJECT_LOG = "🧽 Project $(S_BOLD)%s$(S_END) has been cleaned\n"
 
 ## Binaries names
 NAME			= libclcc.a
@@ -89,7 +89,7 @@ clean_src:
 fclean: 		clean
 				@rm -f $(NAME)
 				@rm -f $(TESTS_NAME)
-				@printf $(CLEAN_PROJECT_LOG)
+				@printf $(CLEAN_PROJECT_LOG) $(NAME)
 
 re:
 				@$(MAKE) fclean -s
