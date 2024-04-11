@@ -5,3 +5,7 @@ tmp
 *.a
 *.out
 .vscode
+*_tests
+*.gcno
+*.gcna
+*.gcda

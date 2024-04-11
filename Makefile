@@ -6,6 +6,7 @@
 ##
 
 SRC_SHORT		=	stdlib.c \
+					signal.c \
 					\
 					sys/socket.c \
 
