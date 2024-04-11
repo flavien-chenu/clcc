@@ -23,7 +23,7 @@ gcc -o your_program main.c -L./libs/clcc -lclcc
 
 int main() {
     // Sepecify that in 2 calls malloc function will return NULL
-    clcc_set_return_value_after(malloc, NULL, 2);
+    clcc_return_value_after(malloc, NULL, 2);
     // Enable control of malloc function
     clcc_enable_control(malloc);
 
