@@ -7,6 +7,8 @@
 
 #pragma once
 
+#include <stdbool.h>
+
 #define PUBLIC_PROTO_CLCC(t_return, func_name) \
     void clcc_##func_name##_control_after(int nb_calls); \
     void clcc_##func_name##_control_now(void); \
