@@ -10,3 +10,4 @@
 #include "../includes/clcc.h"
 
 PUBLIC_PROTO_CLCC(void *, malloc)
+PUBLIC_PROTO_CLCC(void *, calloc)
