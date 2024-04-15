@@ -8,6 +8,7 @@
 SRC_SHORT		=	stdlib.c \
 					signal.c \
 					unistd.c \
+					stdio.c \
 					\
 					sys/socket.c \
 					sys/select.c \
