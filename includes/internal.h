@@ -7,7 +7,9 @@
 
 #pragma once
 
-#define _GNU_SOURCE
+#ifndef RTLD_NEXT
+    #define RTLD_NEXT	((void *) -1l)
+#endif
 
 #include <dlfcn.h>
 #include <unistd.h>

@@ -9,3 +9,5 @@ tmp
 *.gcno
 *.gcna
 *.gcda
+.idea
+cmake-build-debug*
