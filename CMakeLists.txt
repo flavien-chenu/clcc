@@ -10,6 +10,7 @@ add_library(clcc STATIC
         src/unistd.c
         src/sys/select.c
         src/sys/socket.c
+        src/sys/msg.c
 )
 
 target_include_directories(clcc PUBLIC includes)
