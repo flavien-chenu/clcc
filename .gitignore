@@ -11,3 +11,4 @@ tmp
 *.gcda
 .idea
 cmake-build-debug*
+build*
