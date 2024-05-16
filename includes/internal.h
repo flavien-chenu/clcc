@@ -16,6 +16,11 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+// Enable C++ compilers to link these functions correctly
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #define CLCC_DATA_CTX_NAME(func_name) clcc_##func_name##_data_ctx
 #define CLCC_DATA_CTX_TYPE(func_name) clcc_##func_name##_data_ctx_t
 #define CLCC_DATA_CTX_STRUCT(func_name) s_clcc_##func_name##_data_ctx
@@ -135,3 +140,7 @@
         } \
         return CLCC_DATA_CTX_NAME(func_name).return_value; \
     }
+
+#ifdef __cplusplus
+}
+#endif
