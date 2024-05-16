@@ -1,2 +1,0 @@
-/usr/bin/ar qc /home/flavienchenu/my/clcc/libclcc.a CMakeFiles/clcc.dir/src/signal.c.o CMakeFiles/clcc.dir/src/stdio.c.o CMakeFiles/clcc.dir/src/stdlib.c.o CMakeFiles/clcc.dir/src/unistd.c.o CMakeFiles/clcc.dir/src/sys/select.c.o CMakeFiles/clcc.dir/src/sys/socket.c.o CMakeFiles/clcc.dir/src/sys/msg.c.o
-/usr/bin/ranlib /home/flavienchenu/my/clcc/libclcc.a

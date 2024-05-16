@@ -10,8 +10,18 @@
 #include <stdbool.h>
 
 #ifdef __cplusplus
-extern "C" {
+    #define __CLCC_BEGIN_DECLS extern "C" {
+#else
+    #define __CLCC_BEGIN_DECLS
 #endif
+
+#ifdef __cplusplus
+    #define __CLCC_END_DECLS }
+#else
+    #define __CLCC_END_DECLS
+#endif
+
+__CLCC_BEGIN_DECLS
 
 #define PUBLIC_PROTO_CLCC(t_return, func_name) \
     void clcc_##func_name##_control_after(int nb_calls); \
@@ -86,6 +96,4 @@ extern "C" {
 #define clcc_disable_control(func_name) \
     clcc_##func_name##_set_control(false)
 
-#ifdef __cplusplus
-}
-#endif
+__CLCC_END_DECLS
