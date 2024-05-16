@@ -9,4 +9,4 @@
 
 #include "../../includes/clcc.h"
 
-PUBLIC_PROTO_CLCC(int, msg);
+PUBLIC_PROTO_CLCC(int, msgget);
