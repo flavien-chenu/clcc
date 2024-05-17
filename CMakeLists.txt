@@ -13,6 +13,13 @@ add_library(clcc STATIC
         src/sys/select.c
         src/sys/socket.c
         src/sys/msg.c
+        modules/signal.h
+        modules/stdio.h
+        modules/stdlib.h
+        modules/unistd.h
+        modules/sys/select.h
+        modules/sys/socket.h
+        modules/sys/msg.h
 )
 
 target_include_directories(clcc PUBLIC includes)

@@ -11,6 +11,6 @@
 
 __CLCC_BEGIN_DECLS
 
-PUBLIC_PROTO_CLCC(int, select);
+PUBLIC_PROTO_CLCC(int, select)
 
 __CLCC_END_DECLS
