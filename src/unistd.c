@@ -8,3 +8,4 @@
 #include "internal.h"
 
 DECL_CLCC_ARGS_1(int, isatty, int)
+DECL_CLCC_ARGS_0(pid_t, fork)

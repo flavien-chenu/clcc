@@ -69,6 +69,18 @@ extern "C" {
         exit(1); \
     }
 
+#define DECL_CLCC_ARGS_0(t_return, func_name) \
+    DECL_CLCC_COMMONS(t_return, func_name); \
+    t_return func_name() { \
+        if (!CLCC_DATA_CTX_NAME(func_name).control || CLCC_DATA_CTX_NAME(func_name).counter > 0) { \
+            t_return (*real_func)() = dlsym(RTLD_NEXT, #func_name); \
+            PREVENT_NOT_FOUND_REAL_SYMBOL(func_name); \
+            CLCC_DATA_CTX_NAME(func_name).counter -= 1; \
+            return real_func(); \
+        } \
+        return CLCC_DATA_CTX_NAME(func_name).return_value; \
+    }
+
 #define DECL_CLCC_ARGS_1(t_return, func_name, t_arg1) \
     DECL_CLCC_COMMONS(t_return, func_name); \
     t_return func_name(t_arg1 arg1) { \
