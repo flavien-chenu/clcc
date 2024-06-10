@@ -11,6 +11,7 @@ add_library(clcc STATIC
         src/signal.c
         src/stdio.c
         src/stdlib.c
+        src/string.c
         src/unistd.c
         src/sys/select.c
         src/sys/socket.c
@@ -19,6 +20,7 @@ add_library(clcc STATIC
         modules/signal.h
         modules/stdio.h
         modules/stdlib.h
+        modules/string.h
         modules/unistd.h
         modules/sys/select.h
         modules/sys/socket.h
