@@ -9,3 +9,4 @@
 
 DECL_CLCC_ARGS_1(int, isatty, int)
 DECL_CLCC_ARGS_0(pid_t, fork)
+DECL_CLCC_ARGS_3(ssize_t, write, int, const void *, size_t)
