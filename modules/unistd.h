@@ -16,5 +16,6 @@ PUBLIC_PROTO_CLCC(int, isatty)
 PUBLIC_PROTO_CLCC(int, fork)
 PUBLIC_PROTO_CLCC(int, close)
 PUBLIC_PROTO_CLCC(ssize_t, write)
+PUBLIC_PROTO_CLCC(ssize_t, read)
 
 __CLCC_END_DECLS
